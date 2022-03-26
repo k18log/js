@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+<body>
+    <h1>Digite abaixo seus dados pessoais:</h1>
+    <p>País de nascimento: </p>
+    <input type="text" name="nacionalidade" id="nacionalidade">
+    
+    <p>Sua idade:</p>
+    <input type="text" name="age" id="age">
+    
+    <p>Gênero:</p>
+    <input type="text" name="genero" id="genero">
+
+    <input type="button" value="Confirmar" onclick="ver()">
+    <div id="res"></div>
+
+    <script>
+        var pais = window.document.getElementById('nacionalidade')
+        var p = String(pais.value)
+        var idade = window.document.getElementById('age')
+        var i = String(idade.value)
+        var sexo = window.document.getElementById('genero')
+        var s = String(sexo.value)
+        var res = window.document.getElementById('res')
+        res.innerHTML = `Seu país de origem é ${p}, você tem ${i} e é do gênero ${s}.`
+        function ver() {
+            if (res == 'Brasil') {
+            res.innerHTML += `Seu país de origem é Brasil.`
+            }
+        }
+    </script>
+    
+    
+</body>
+</html>

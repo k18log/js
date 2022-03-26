@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculos</title>
+
+    <style>
+        body {
+            font: normal 14pt Arial;
+
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>Adição</h1>
+    <input type="number" name="dig1" id="dig1">
+    <input type="number" name="dig2" id="dig2">
+    <input type="button" value="Somar" onclick = "soma()">
+    <div id="res">Resultado</div>
+
+    <h1>Subtração</h1>
+    <input type="number" name="digi1" id="digi1">
+    <input type="number" name="digi2" id="digi2">
+    <input type="button" value="Subtração" onclick = "sub()">
+    <div id="resp">Resultado</div>
+
+    <h1>Multiplicação</h1>
+    <input type="number" name="digit1" id="digit1">
+    <input type="number" name="digit2" id="digit2">
+    <input type="button" value="Multiplicação" onclick = "mult()">
+    <div id="respo">Resultado</div>
+
+    <h1>Divisão</h1>
+    <input type="number" name="digito1" id="digito1">
+    <input type="number" name="digito2" id="digito2">
+    <input type="button" value="Divisão" onclick = "divisor()">
+    <div id="respos">Resultado</div>
+
+    <script>
+        function soma() {
+        var n1 = window.document.getElementById('dig1')
+        var n2 = window.document.getElementById('dig2')
+        var res = window.document.getElementById('res')
+        var d1 = Number(n1.value)
+        var d2 = Number(n2.value)
+        var s = d1 + d2
+        res.innerHTML = `A soma entre ${d1} e ${d2} é igual a ${s}.`
+        }
+
+        function sub() {
+        var n1 = window.document.getElementById('digi1')
+        var n2 = window.document.getElementById('digi2')
+        var resp = window.document.getElementById('resp')
+        var d1 = Number(n1.value)
+        var d2 = Number(n2.value)
+        var s = d1 - d2
+        resp.innerHTML = `A subtração entre ${d1} e ${d2} é igual a ${s}.`
+        }
+
+        function mult() {
+        var n1 = window.document.getElementById('digit1')
+        var n2 = window.document.getElementById('digit2')
+        var respo = window.document.getElementById('respo')
+        var d1 = Number(n1.value)
+        var d2 = Number(n2.value)
+        var s = d1 * d2
+        respo.innerHTML = `A multiplicação entre ${d1} e ${d2} é igual a ${s}.`
+        }
+
+        function divisor() {
+        var n1 = window.document.getElementById('digito1')
+        var n2 = window.document.getElementById('digito2')
+        var respo = window.document.getElementById('respos')
+        var d1 = Number(n1.value)
+        var d2 = Number(n2.value)
+        var s = d1 / d2
+        respo.innerHTML = `A multiplicação entre ${d1} e ${d2} é igual a ${s}.`
+        }
+    </script>
+</body>
+</html>
